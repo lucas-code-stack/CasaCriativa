@@ -9,3 +9,4 @@ Versão do projeto : 1.0.0
 Linguagem Usada : JavaScript
 Frameworks Usados : Express, Node.js
 Banco de Dados : MySQL lite3
+
