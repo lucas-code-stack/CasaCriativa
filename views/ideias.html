@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% set bodyId = "page-ideas"%}
+
+{% block title %}
+  <title>Ideias - Casa Criativa</title>
+{% endblock title %}
+
+{% block content %}
+  <header>   
+     <nav>
+         <li><a href="/">Inicio</a></li>
+         <li><a class="button" href="#" onclick="onOff()">Nova Ideia</a></li>
+     </nav>
+     <p id="version">
+       Versão 1.1.0
+     </p>      
+  </header>
+
+  <section id="title">
+      <p>Em Exibição</p>
+      <h1>Ideias</h1>
+  </section>
+  <main>
+     <section id="ideas">
+        {% include "all_ideas.html" %}
+     </section>
+  </main>
+  <footer>
+     com ❤ <a class="transition" href="https://www.instagram.com/lukas_spek/" target="_blank">Lucas</a>
+  </footer>
+ {% endblock %}

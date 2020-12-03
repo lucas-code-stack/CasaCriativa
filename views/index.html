@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section id="intro">
+  <header>
+    <a href="/">
+      <img src="/logo.png" alt="Logomarca Casa Criativa" />
+    </a>
+  </header>
+
+  <main>
+    <p>Ficar em casa por longos períodos não deve ser nada facil</p>
+
+    <p>
+      Iremos catalogar<strong>
+      ideias, brincadeiras, jogos, filmes, livros, cursos,</strong>
+      dicas e tudo que for necessário para tornar esse momento mais interessante
+    </p>
+
+    <p>
+      Comece clicando em ver ideias para ver as ideias cadastradas e nos ajude
+      adicionando a sua ideia
+    </p>                
+  </main>
+
+  <section id="buttons">
+    <button onclick="onOff()">+ Adicionar Ideias</button>
+    <a href="/ideias" class="button">Ver Ideias</a>
+  </section>
+
+  <footer>
+    Com ❤
+    <a
+      class="transition"
+      href="https://www.instagram.com/lukas_spek/"
+      target="_blank">
+      Lucas</a>
+  </footer>
+</section>
+
+<section id="last-ideas">
+    {% include "all_ideas.html" %}
+</section>
+
+{% endblock %}
