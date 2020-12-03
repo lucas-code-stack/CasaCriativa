@@ -4,7 +4,7 @@ const db = new sqlite3.Database('./nwl.db')
 db.serialize(function() {
 
     // Create table
-  /*    db.run(`
+      db.run(`
         CREATE TABLE IF NOT EXISTS ideas(
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         image TEXT,
@@ -41,18 +41,18 @@ db.serialize(function() {
     
     // delete data from table
 
-      db.run(`DELETE FROM ideas WHERE id = ?`, [13], function(err) {
+      db.run(`DELETE FROM ideas WHERE id = ?`, [], function(err) {
         if(err) return console.log(err)
 
-        console.log("DELETEI", this)
+        console.log("Dado Deletado", this)
     }) 
 
     // consult data into table
-    /* db.all(`SELECT * FROM ideas`, function(err,rows) {
+     db.all(`SELECT * FROM ideas`, function(err,rows) {
         if(err) return console.log(err)
 
         console.log(rows)
-   })*/
+   })
 
 })
 
